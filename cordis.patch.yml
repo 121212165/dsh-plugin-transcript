@@ -1,0 +1,9 @@
+# Mounts transcript into a dsh profile. Later layers win per row, no deep merge.
+- insert:
+    - id: transcript
+      name: dsh-plugin-transcript
+      config:
+        enabled: true
+        # dataDir: ~/.dsh/transcripts     # monthly JSONL sidecars + markdown/ renders
+        captureTools: true                # tool call lines (name + argument preview)
+        captureReasoning: false           # thinking text as collapsible system blocks
