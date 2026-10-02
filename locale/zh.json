@@ -1,0 +1,6 @@
+{
+  "meta": {
+    "title": "会话转录",
+    "description": "自动把会话归档为 Markdown（用户/助手/工具全记录），可推送 Obsidian"
+  }
+}
