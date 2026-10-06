@@ -1,5 +1,8 @@
 # dsh-plugin-transcript
 
+> 🧩 **dsh 插件家族**（22 件）：总目录 **[dsh-plugin-family](https://github.com/121212165/dsh-plugin-family)** ｜ 明星插件：**[ide-hub](https://github.com/121212165/dsh-plugin-ide-hub)** 跨 IDE 统一管理 · **[task-forge](https://github.com/121212165/dsh-plugin-task-forge)** 跨窗口无损交接 · **[quota](https://github.com/121212165/dsh-plugin-quota)** 实时用量仪表
+
+
 **EN** · The data layer other plugins read: archives every session turn (`user/message`, `assistant/message`, `tool/call`, `session/title`) into monthly JSONL sidecars and renders Markdown on demand (`/transcript`, `/transcript-export`). dsh-plugin-transcript-search, dsh-plugin-obsidian-push and dsh-plugin-html-report all consume these files. · 10 `node --test` green · event types taken from the harness's own generated type files · not live-mounted · if dsh crashes mid-session the Markdown is not auto-flushed (JSONL stays intact and re-renderable).
 
 DeepSeek Harness (dsh) 插件：会话转录归档器。把每次会话的用户输入、助手输出、工具调用实时追加进按月 JSONL 边车，随时（或会话结束自动）渲染成 Markdown 存档——为"把 AI 会话变成可检索资产"的工作流（Obsidian 归档、写作素材库）服务。
