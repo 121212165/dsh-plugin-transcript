@@ -39,7 +39,6 @@ export function apply(ctx: Context, config: Config): void {
   if (!config.enabled) return void log.info('disabled by config');
 
   const store = new TranscriptStore(config.dataDir);
-  const currentSession = new Map<string, string>(); // agentKey -> sessionId
   const titleBySession = new Map<string, string>();
   const seenUserTexts = new Set<string>();
 

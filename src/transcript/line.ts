@@ -5,8 +5,8 @@ export interface TranscriptLine {
   sessionId: string;
   at: string;
   kind: 'user' | 'assistant' | 'tool' | 'system';
-  turn?: number;
-  who?: string;
+  turn?: number | undefined;
+  who?: string | undefined;
   text: string;
 }
 

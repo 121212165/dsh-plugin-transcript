@@ -10,9 +10,9 @@ export type TranscriptKind = 'user' | 'assistant' | 'tool' | 'system';
 export interface TranscriptEntry {
   kind: TranscriptKind;
   at: string; // ISO
-  turn?: number;
+  turn?: number | undefined;
   /** display name: model id for assistant, tool name for tool entries */
-  who?: string;
+  who?: string | undefined;
   text: string;
 }
 
@@ -85,7 +85,7 @@ export function textFromStreamChunks(chunks: unknown): { body: string; reasoning
   return { body, reasoning };
 }
 
-export function renderTranscript(entries: TranscriptEntry[], meta: { sessionId: string; title?: string }): string {
+export function renderTranscript(entries: TranscriptEntry[], meta: { sessionId: string; title?: string | undefined }): string {
   const lines: string[] = [];
   const heading = meta.title ? `# ${meta.title}` : `# Session ${meta.sessionId.slice(0, 8)}`;
   lines.push(heading, '');

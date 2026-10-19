@@ -1,6 +1,7 @@
-import { mkdirSync, appendFileSync, readFileSync, existsSync, readdirSync, writeFileSync } from 'node:fs';
+import { mkdirSync, appendFileSync, readFileSync, existsSync, readdirSync } from 'node:fs';
 import { homedir } from 'node:os';
 import { join } from 'node:path';
+import { writeFileAtomic } from '@dsh-family/kit';
 import { parseJsonl, type TranscriptLine } from './line.ts';
 
 /**
@@ -44,7 +45,7 @@ export class TranscriptStore {
     const dir = join(this.dataDir, 'markdown');
     mkdirSync(dir, { recursive: true });
     const file = join(dir, name);
-    writeFileSync(file, content, "utf8");
+    writeFileAtomic(file, content);
     return file;
   }
 }
