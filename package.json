@@ -32,6 +32,11 @@
   "dsh": {
     "bundle": {
       "patch": "./cordis.patch.yml"
+    },
+    "catalog": {
+      "category": "会话与知识库",
+      "blurb": "会话转录归档：user/assistant/tool 全量落 JSONL → Markdown，接 Obsidian 工作流",
+      "entries": "自动归档"
     }
   },
   "engines": {
