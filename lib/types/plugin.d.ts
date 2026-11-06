@@ -18,16 +18,16 @@ export interface Config {
     /** capture thinking/reasoning as collapsible blocks */
     captureReasoning: boolean;
 }
-export declare const Config: Schema<Schemastery.ObjectS<{
-    enabled: Schema<boolean, boolean>;
-    dataDir: Schema<string, string>;
-    captureTools: Schema<boolean, boolean>;
-    captureReasoning: Schema<boolean, boolean>;
-}>, Schemastery.ObjectT<{
-    enabled: Schema<boolean, boolean>;
-    dataDir: Schema<string, string>;
-    captureTools: Schema<boolean, boolean>;
-    captureReasoning: Schema<boolean, boolean>;
-}>>;
+export declare const Config: Schema<Schemastery.ObjectS<NoInfer<{
+    enabled: Schema<boolean, boolean, "defined">;
+    dataDir: Schema<string, string, "defined">;
+    captureTools: Schema<boolean, boolean, "defined">;
+    captureReasoning: Schema<boolean, boolean, "defined">;
+}>>, Schemastery.ObjectT<NoInfer<{
+    enabled: Schema<boolean, boolean, "defined">;
+    dataDir: Schema<string, string, "defined">;
+    captureTools: Schema<boolean, boolean, "defined">;
+    captureReasoning: Schema<boolean, boolean, "defined">;
+}>>, "plain">;
 export declare function apply(ctx: Context, config: Config): void;
 //# sourceMappingURL=plugin.d.ts.map
